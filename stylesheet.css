@@ -1,0 +1,46 @@
+::selection {
+    background-color:rgb(227, 207, 195);
+    color:black;
+}
+header {
+  background-color: rgb(95, 75, 51);
+  padding: 20px;
+  text-align: center;
+}
+body {
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1 {
+  color: white;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --bg-color: #f5e4d9;
+  --text-color: black;
+  --bg-image: url('images/bild1.png');
+}
+html.dark-mode {
+  --bg-color: #111;
+  --text-color: white;
+  --bg-image: url('images/bild2.png');
+}
+.dark-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgb(206, 185, 165);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dark-button:hover {
+    color: rgb(86, 70, 56);
+}

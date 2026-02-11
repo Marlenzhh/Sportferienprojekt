@@ -1,5 +1,4 @@
 <?php
-
 $host = 'localhost';
 $user = 'root';
 $pass = 'marlen1234';
@@ -11,6 +10,4 @@ if (!$conn) {
     die ("Verbindung fehlgeschlagen:" . mysqli_connect_error());
 }
 echo "Verbindung erfolgreich!" . "<br><br>";
-
-
 ?>
