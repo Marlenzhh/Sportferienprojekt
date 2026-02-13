@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrierung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="darkmode.js" defer></script>
+</head>
+<header>
+    <h1>Registrieren</h1>
+    <div class="dark-button">
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </div>
+    <ul>
+        <a href="startseite.html"><button class="mein-button">Zurück zur startseite</button></a>
+    </ul>
+</header>
+<body>
+    <div class="register-card">
+        <h2>User registrieren</h2>
+        <form action="login.php" method="post">
+            <label for="email">Gib deine Email-Adresse ein</label>
+            <input type="email" id="email" name="email" placeholder="name@beispiel.ch" required>
+            
+            <label for="password">Gib ein neues Passwort ein</label>
+            <input type="password" id="password" name="password" placeholder="8 Zeichen von Empfehlung" required>
+            
+            <input type="submit" value="Jetzt Registrieren">
+        </form>
+    </div>
+
+</body>
+</html>

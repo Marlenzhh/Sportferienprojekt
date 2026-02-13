@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="darkmode.js" defer></script>
+    </head>
+    <header>
+        <h1>Anmelden</h1>
+        <div class="dark-button">
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+        <ul>
+            <a href="startseite.html"><button class="mein-button">startseite</button></a>
+        </ul>
+    </header>
+    <body>
+
+        <div class="login-card">
+            <h2>User anmelden</h2>
+            <form action="logincheck.php" method="post">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@beispiel.ch" required>
+                
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+                
+                <label>
+                    <input type="checkbox" onclick="togglePassword()">
+                    Passwort anzeigen
+                </label>
+
+                <input type="submit" value="Einloggen">
+            </form>
+        </div>
+        <script>
+            function togglePassword() {
+                const field = document.getElementById("password");
+                field.type = field.type === "password" ? "text" : "password";
+            }
+        </script>
+    </body>
+
+</html>

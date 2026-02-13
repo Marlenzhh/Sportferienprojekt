@@ -10,7 +10,7 @@ if (!$conn) {
     die ("Verbindung fehlgeschlagen:" . mysqli_connect_error());
 }
 
-$sql = "SELECT movie_id, movie_name, movie_category, movie_description, movie_status FROM movie";
+$sql = "SELECT series_id, series_name, series_category, series_description, series_status FROM series";
 $result = mysqli_query($conn, $sql);
 $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
@@ -36,16 +36,15 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     body {
         background-color: #ece3dc;
-        background-image: url('images/bild9.png');
         background-attachment: fixed;
         background-repeat: no-repeat; 
         background-position: center;
         background-size: cover; 
     }
-    .movie-box {
+    .serie-box {
         transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
-    .movie-box:hover {
+    .serie-box:hover {
         background-color: #dec8b8;
         box-shadow: 0 6px 14px rgb(175, 164, 135);
         transform: translateY(-4px);
@@ -70,16 +69,16 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>Filmübersicht</title>
+        <title>Serienübersicht</title>
     </head>
         <header>
-            <h1 style="color: black; font-family: Arial">Filmübersicht</h1>
+            <h1 style="color: black; font-family: Arial">Serienübersicht</h1>
             <a href="startseite.html"><button class="mein-button">Startseite</button></a>
         </header>
     <body>
     <hr>
         <?php if (empty($articles)): ?>
-            <p>kein Film vorhanden</p>
+            <p>keine Serie vorhanden</p>
         <?php else: ?>
             <div style="
                 display: grid;
@@ -98,11 +97,11 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     font-family: Arial; 
                                     font-weight: normal;">
 
-                        <b>Film ID:</b> <?= htmlspecialchars($row['movie_id']) ?><br>
-                        <b>Name des Films:</b> <?= htmlspecialchars($row['movie_name']) ?><br>
-                        <b>Kategory:</b> <?= htmlspecialchars($row['movie_category']) ?> €<br>
-                        <b>Beschreibung:</b> <?= htmlspecialchars($row['movie_description']) ?><br>
-                        <b>Status:</b> <?= htmlspecialchars($row['movie_status']) ?>
+                        <b>Film ID:</b> <?= htmlspecialchars($row['series_id']) ?><br>
+                        <b>Name des Films:</b> <?= htmlspecialchars($row['series_name']) ?><br>
+                        <b>Kategory:</b> <?= htmlspecialchars($row['series_category']) ?> €<br>
+                        <b>Beschreibung:</b> <?= htmlspecialchars($row['series_description']) ?><br>
+                        <b>Status:</b> <?= htmlspecialchars($row['series_status']) ?>
                     </strong>
                 </div>
             <?php endforeach; ?>
