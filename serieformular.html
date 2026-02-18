@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Serien hinzufügen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="darkmode.js" defer></script>
+    </head>
+    <body>
+    <header>
+        <h1>Neue Serie hinzufügen</h1>
+        <div class="dark-button">
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+        <ul>                  
+            <a href="hinzufügen.html"><button class="mein-button">Zurück</button></a>
+        </ul>
+    </header>
+        <div class="box">
+
+            <form action="seriehinzufuegung.php" method="POST">
+            <label>
+                Name der Serie
+                <input type="text" name="series_name" required></input>
+            </label>
+
+            <label>
+                Serienkategorie
+                <input type="text" name="series_category" required></input>
+            </label>
+
+            <label>
+                Serienbeschreibung
+                <textarea name="series_description" rows="6" required></textarea>
+            </label>
+
+            <label>
+                Status (Fertig geschaut, Noch anschauen, Weiterschauen)
+                <input type="text" name="series_status" required></input>
+            </label>
+
+            <button type="submit">Speichern</button>
+            </form>
+        </div>
+    </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glassmorphism Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 20% 20%, #7c3aed 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, #06b6d4 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, #22c55e 0%, transparent 50%),
+        #0b1020;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .glass-card {
+      width: 320px;
+      padding: 24px;
+      border-radius: 20px;
+
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.18),
+        rgba(255, 255, 255, 0.05)
+      );
+
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .glass-card h2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .glass-card p {
+      opacity: 0.85;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .glass-badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+
+      border: 1px solid rgba(255, 255, 255, 0.25);
+
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="glass-badge">
+      🔥 Glass Label
+    </div>
+
+    <div class="glass-card">
+      <h2>Glass Card</h2>
+      <p>
+        Halbtransparent, weichgezeichnet und leicht glänzend.
+        Funktioniert nur richtig gut, wenn der Hintergrund spannend genug ist.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

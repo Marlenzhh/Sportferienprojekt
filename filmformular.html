@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Filme hinzufügen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="darkmode.js" defer></script>
+    </head>
+    <body>
+    <header>
+        <h1>Neuer Film hinzufügen</h1>
+        <div class="dark-button">
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+        <ul>                  
+            <a href="hinzufügen.html"><button class="mein-button">Zurück</button></a>
+        </ul>
+    </header>
+    <body>
+        <div class="box">
+
+            <form action="filmhunzufuegen.php" method="POST">
+            <label>
+                Name des Filmes
+                <input type="text" name="movie_name" required></input>
+            </label>
+
+            <label>
+                Filmkategorie
+                <input type="text" name="movie_category" required></input>
+            </label>
+
+            <label>
+                Filmbeschreibung
+                <textarea name="movie_description" rows="6" required></textarea>
+            </label>
+
+            <label>
+                Status (Fertig geschaut, Noch anschauen, Weiterschauen)
+                <input type="text" name="movie_status" required></input>
+            </label>
+
+            <button type="submit">Speichern</button>
+            </form>
+        </div>
+    </body>
+</html>

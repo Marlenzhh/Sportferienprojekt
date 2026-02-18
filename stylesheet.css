@@ -267,3 +267,126 @@ input[type="submit"]:hover {
   top: 10%;
   left: 55%;
 }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+.col {
+  background: rgba(230, 216, 207, 0.488);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 14px;
+  min-height: 60vh;
+  backdrop-filter: blur(6px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.col h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 40vh;
+}
+.card {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: grab;
+}
+.card:active { 
+  cursor: grabbing; 
+}
+.card .title { 
+  font-weight: 700; margin-bottom: 6px; 
+}
+.card .meta { 
+  font-size: 12px; opacity: 0.85; margin-bottom: 6px; 
+}
+.card .desc { 
+  font-size: 13px; opacity: 0.9; 
+}
+.pic-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 1100 / 900;
+  margin: auto;
+}
+.pic {
+  position: absolute;
+  width: 22%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 90, 67, 0.904);
+  background-color: white; 
+}
+.pic:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(189, 160, 143, 0.904);
+}
+.pic:nth-child(1) {
+  top: 10%;
+  left: 30%;
+}
+.pic:nth-child(2) {
+  top: 10%;
+  left: 55%;
+}
+.box {
+  top: 20%;
+  left: 40%;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px auto;
+  background: rgb(231, 222, 212);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.box h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: black;
+}
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(68, 56, 41);
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background: rgb(235, 230, 224);
+  color: rgb(58, 51, 34);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: rgb(90, 76, 63);
+  color: white;
+}
+button:hover{
+  background: rgb(63, 51, 40);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(63, 51, 40);;
+}

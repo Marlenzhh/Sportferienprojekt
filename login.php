@@ -13,6 +13,16 @@ if (!$conn) {
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+$check = mysqli_prepare($conn, "SELECT user_id FROM user WHERE user_email = ?");
+mysqli_stmt_bind_param($check, "s", $email);
+mysqli_stmt_execute($check);
+mysqli_stmt_store_result($check);
+
+if (mysqli_stmt_num_rows($check) > 0) {
+    header("Location: registeremail.html");
+    exit();
+}
+
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO user (user_email, user_passwort) VALUES (?, ?)";

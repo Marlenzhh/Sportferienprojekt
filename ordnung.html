@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Filme und Serien ordnen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="darkmode.js" defer></script>
+    </head>
+    <body>
+    <header>
+        <h1>Ordne deine Filme und Serien</h1>
+        <div class="dark-button">
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+        <ul>                  
+            <a href="tracking.html"><button class="mein-button">Zurück</button></a>
+        </ul>
+    </header>
+
+        <div class="board">
+        <section class="col">
+            <h2>Noch anschauen</h2>
+            <div class="list" id="col-planned"></div>
+        </section>
+
+        <section class="col">
+            <h2>Weiterschauen</h2>
+            <div class="list" id="col-watching"></div>
+        </section>
+
+        <section class="col">
+            <h2>Bereits angeschaut</h2>
+            <div class="list" id="col-completed"></div>
+        </section>
+        </div>
+        <script>
+            async function loadBoard() {
+                const res = await fetch('load_board.php');
+                const data = await res.json();
+
+                renderColumn('planned', data.planned);
+                renderColumn('watching', data.watching);
+                renderColumn('completed', data.completed);
+            }
+
+            function renderColumn(status, items) {
+            const col = document.getElementById('col-' + status);
+            if (!col) return;
+
+            col.innerHTML = '';
+            (items || []).forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'card';
+                div.textContent = item.series_name;
+                col.appendChild(div);
+            });
+            }
+            loadBoard();
+        </script>
+
+    </body>
+</html>

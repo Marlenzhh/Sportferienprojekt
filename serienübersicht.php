@@ -97,9 +97,9 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     font-family: Arial; 
                                     font-weight: normal;">
 
-                        <b>Film ID:</b> <?= htmlspecialchars($row['series_id']) ?><br>
-                        <b>Name des Films:</b> <?= htmlspecialchars($row['series_name']) ?><br>
-                        <b>Kategory:</b> <?= htmlspecialchars($row['series_category']) ?> €<br>
+                        <b>Serien ID:</b> <?= htmlspecialchars($row['series_id']) ?><br>
+                        <b>Name der Serie:</b> <?= htmlspecialchars($row['series_name']) ?><br>
+                        <b>Kategorie:</b> <?= htmlspecialchars($row['series_category']) ?><br>
                         <b>Beschreibung:</b> <?= htmlspecialchars($row['series_description']) ?><br>
                         <b>Status:</b> <?= htmlspecialchars($row['series_status']) ?>
                     </strong>

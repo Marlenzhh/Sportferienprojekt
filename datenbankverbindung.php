@@ -100,7 +100,7 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
                         <b>Film ID:</b> <?= htmlspecialchars($row['movie_id']) ?><br>
                         <b>Name des Films:</b> <?= htmlspecialchars($row['movie_name']) ?><br>
-                        <b>Kategory:</b> <?= htmlspecialchars($row['movie_category']) ?> €<br>
+                        <b>Kategorie:</b> <?= htmlspecialchars($row['movie_category']) ?><br>
                         <b>Beschreibung:</b> <?= htmlspecialchars($row['movie_description']) ?><br>
                         <b>Status:</b> <?= htmlspecialchars($row['movie_status']) ?>
                     </strong>

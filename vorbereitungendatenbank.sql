@@ -4,3 +4,10 @@ INSERT INTO series(series_id, series_name, series_category, series_description) 
 
 INSERT INTO movie(movie_id, movie_name, movie_category, movie_description) VALUES
 (1, 'Attack On Titan (Last Attack)' , 'Anime, Action, Dark Fantasy, Drama' , 'Erens Plan zur globalen Zerstörung eskaliert, während seine Freunde versuchen, ihn aufzuhalten. Inmitten von Verrat und Verlusten steht die Menschheit vor ihrer größten Bedrohung.');
+
+INSERT INTO user_series (user_id, series_id, status) VALUES 
+(6, 1, 'Weiterschauen'),
+(6, 2, 'Weiterschauen');
+
+INSERT INTO user_movie (user_id, movie_id, status) VALUES 
+(6, 1, 'bereits angeschaut');
