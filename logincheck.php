@@ -1,3 +1,6 @@
+/* Marlen Mueller
+   Created on Thurstay, 12.02.2026 */
+
 <?php
 session_start();
 

@@ -1,3 +1,6 @@
+/* Marlen Mueller
+   Created on Wednesday, 11.02.2026 */
+
 const toggleButton = document.getElementById('dark-mode-toggle');
 const root = document.documentElement; // html
 

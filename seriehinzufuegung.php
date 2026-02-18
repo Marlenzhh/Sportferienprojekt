@@ -1,3 +1,6 @@
+/* Marlen Mueller
+   Created on Thursday, 12.02.2026 */
+
 <?php
 
 $host = "localhost";
