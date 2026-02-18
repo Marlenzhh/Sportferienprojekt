@@ -1,5 +1,6 @@
 /* Marlen Mueller
-   Created on Friday, 13.02.2026 */
+   Created on Friday, 13.02.2026 
+   used own knowlege and AI*/
 
 <?php
 require __DIR__ . '/ordnungverbindung.php';
